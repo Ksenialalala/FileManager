@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Файловый менеджер"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="20dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Путь к каталогу:"
+        android:textSize="16sp"
+        android:layout_marginBottom="5dp" />
+
+    <EditText
+        android:id="@+id/etPath"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Введите путь к каталогу"
+        android:inputType="text"
+        android:layout_marginBottom="15dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Выберите операцию:"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="5dp" />
+
+    <RadioGroup
+        android:id="@+id/rgOperations"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/rbShow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Показать содержимое каталога"
+            android:checked="true" />
+
+        <RadioButton
+            android:id="@+id/rbCreate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Создать папку" />
+
+        <RadioButton
+            android:id="@+id/rbDelete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Удалить папку" />
+
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/etFolderName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Название папки"
+        android:inputType="text"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp" />
+
+    <Button
+        android:id="@+id/btnExecute"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Выполнить"
+        android:layout_marginTop="5dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Содержимое каталога:"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="5dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/tvContents"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Здесь появится список файлов и папок"
+            android:textSize="14sp"
+            android:padding="8dp" />
+
+    </ScrollView>
+
+</LinearLayout>
